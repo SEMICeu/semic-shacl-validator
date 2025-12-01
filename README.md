@@ -1,4 +1,4 @@
-# semic-shacl-validator
+# SEMIC SHACL validator
 
 The online service is accessible as follows:
 * Web UI: https://www.itb.ec.europa.eu/shacl/semic-shacl/upload.
