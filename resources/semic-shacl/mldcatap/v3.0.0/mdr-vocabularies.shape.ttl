@@ -249,8 +249,8 @@
     a sh:NodeShape ;
     rdfs:comment "Checksum algorithm restriction" ;
     rdfs:label "Checksum algorithm restriction" ;
-    sh:pattern "^https://spdx.org/rdf/terms" ;
-    sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm>.
+    sh:pattern "^https://spdx\\.org/rdf/terms#.+" ;
+    sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm> .
 
 :Checksum_ShapeCV
     a sh:NodeShape ;
