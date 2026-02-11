@@ -231,7 +231,7 @@
     rdfs:comment "IANA restriction - base itself on URL structure" ;
     rdfs:label "IANA restriction" ;
     a sh:NodeShape ;
-    sh:pattern "^http.*://www.iana.org/assignments/media-types/" .
+    sh:pattern "^https?://www\\.iana\\.org/assignments/media-types/.+"" .
 
 :StatusRestriction
     a sh:NodeShape ;
