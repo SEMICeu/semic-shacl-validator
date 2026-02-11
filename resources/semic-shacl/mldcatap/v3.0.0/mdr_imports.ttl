@@ -22,7 +22,8 @@
   owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ; 
   owl:imports <http://publications.europa.eu/resource/authority/place> ;
   owl:imports <http://publications.europa.eu/resource/authority/planned-availability> ;
-  owl:imports <http://publications.europa.eu/resource/authority/access-right>
+  owl:imports <http://publications.europa.eu/resource/authority/access-right> ;
+  owl:imports <https://semiceu.github.io/MLDCAT-AP/releases/codelist/dataset-status.ttl> 
 .
 
 # import of the checksum vocabulary
