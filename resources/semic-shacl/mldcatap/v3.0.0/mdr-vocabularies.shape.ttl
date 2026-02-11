@@ -151,6 +151,17 @@
         sh:path skos:inScheme
     ] .
 	
+:DatasetStatusRestriction
+    a sh:NodeShape ;
+    rdfs:comment "Dataset Status Restriction" ;
+    rdfs:label "Dataset Status Restriction" ;
+    sh:property [
+        sh:hasValue <http://openml.org/openml/dataset-status> ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path skos:inScheme
+    ] .	
+
 :FileTypeRestriction
     a sh:NodeShape ;
     rdfs:comment "File Type Restriction" ;
@@ -358,7 +369,7 @@
         sh:node :DatasetStatusRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path adms:status ;
-	sh:description "Multiple types can be used but it is recommended to also provide at least one concept of <http://publications.europa.eu/resource/authority/dataset-type> should be present" ;
+	    sh:description "Multiple status can be used but it is recommended to also provide at least one concept of <http://openml.org/openml/dataset-status> should be present" ;
         sh:severity sh:Warning
     ], [
         sh:node :AccessRightRestriction ;
@@ -494,13 +505,3 @@
         sh:severity sh:Violation
     ] .
 
-:DatasetStatusRestriction
-    a sh:NodeShape ;
-    rdfs:comment "Dataset Status Restriction" ;
-    rdfs:label "Dataset Status Restriction" ;
-    sh:property [
-        sh:hasValue <http://openml.org/openml/dataset-status> ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-        sh:path skos:inScheme
-    ] .	

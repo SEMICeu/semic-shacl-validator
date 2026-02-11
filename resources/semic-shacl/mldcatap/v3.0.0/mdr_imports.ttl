@@ -23,7 +23,7 @@
   owl:imports <http://publications.europa.eu/resource/authority/place> ;
   owl:imports <http://publications.europa.eu/resource/authority/planned-availability> ;
   owl:imports <http://publications.europa.eu/resource/authority/access-right> ;
-  owl:imports <https://semiceu.github.io/MLDCAT-AP/releases/codelist/dataset-status.ttl> 
+  owl:imports <https://raw.githubusercontent.com/SEMICeu/MLDCAT-AP/refs/heads/main/releases/codelist/dataset-status.ttl> 
 .
 
 # import of the checksum vocabulary
