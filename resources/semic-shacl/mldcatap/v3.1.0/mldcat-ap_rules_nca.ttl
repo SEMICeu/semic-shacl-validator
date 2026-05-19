@@ -1,0 +1,386 @@
+@prefix schema: <http://schema.org/> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix mldcatap: <https://semiceu.github.io/MLDCAT-AP/releases/3.0.0#> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix mlso: <http://w3id.org/mlso/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lpwc: <https://linkedpaperswithcode.com/property/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix biro: <http://purl.org/spar/biro/> .
+@prefix it6: <http://data.europa.eu/it6/> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix lpwcc: <https://linkedpaperswithcode.com/class/> .
+@prefix mls: <http://www.w3.org/ns/mls#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+mldcatap:COP-AgentShape a sh:NodeShape;
+  sh:targetClass foaf:Agent;
+  rdfs:label "A shape for Agent class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P31 .
+
+mldcatap:COP-MachineLearningModelShape a sh:NodeShape;
+  sh:targetClass it6:MachineLearningModel;
+  rdfs:label "A shape for Machine Learning Model class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P34, mldcatap:NCA-P35, mldcatap:NCA-P36, mldcatap:NCA-P37,
+    mldcatap:NCA-P38, mldcatap:NCA-P39, mldcatap:NCA-P40, mldcatap:NCA-P41, mldcatap:NCA-P42,
+    mldcatap:NCA-P43, mldcatap:NCA-P44, mldcatap:NCA-P45, mldcatap:NCA-P46, mldcatap:NCA-P47,
+    mldcatap:NCA-P48, mldcatap:NCA-P49, mldcatap:NCA-P50, mldcatap:NCA-P51, mldcatap:NCA-P52 .
+
+mldcatap:COP-FileShape a sh:NodeShape;
+  sh:targetClass it6:File;
+  rdfs:label "A shape for File class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P55 .
+
+mldcatap:COP-ModalityShape a sh:NodeShape;
+  sh:targetClass it6:Modality;
+  rdfs:label "A shape for Modality class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P58 .
+
+mldcatap:COP-DistributionShape a sh:NodeShape;
+  sh:targetClass dcat:Distribution;
+  rdfs:label "A shape for Distribution class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P61, mldcatap:NCA-P62 .
+
+mldcatap:COP-LibraryShape a sh:NodeShape;
+  sh:targetClass it6:Library;
+  rdfs:label "A shape for Library class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P65, mldcatap:NCA-P66 .
+
+mldcatap:COP-DatasetShape a sh:NodeShape;
+  sh:targetClass dcat:Dataset;
+  rdfs:label "A shape for Dataset class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P69, mldcatap:NCA-P70, mldcatap:NCA-P71, mldcatap:NCA-P72,
+    mldcatap:NCA-P73, mldcatap:NCA-P74, mldcatap:NCA-P75, mldcatap:NCA-P76, mldcatap:NCA-P77,
+    mldcatap:NCA-P78, mldcatap:NCA-P79 .
+
+mldcatap:COP-RunShape a sh:NodeShape;
+  sh:targetClass it6:Run;
+  rdfs:label "A shape for Run class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P82, mldcatap:NCA-P83, mldcatap:NCA-P84 .
+
+mldcatap:COP-EnvironmentalImpactShape a sh:NodeShape;
+  sh:targetClass it6:EnvironmentalImpact;
+  rdfs:label "A shape for EnvironmentalImpact class"@en;
+  rdfs:comment "Shape created for Code of Practice transparency rules"@en;
+  sh:property mldcatap:NCA-P85, mldcatap:NCA-P88 .
+
+mldcatap:NCA-P31 a sh:PropertyShape;
+  sh:path foaf:name;
+  sh:name "name"@en;
+  sh:description "A name of the agent.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P34 a sh:PropertyShape;
+  sh:path it6:hasProvider;
+  sh:name "has provider"@en;
+  sh:description "A natural or legal person, public authority, agency or other body that develops a Machine Learning Model or places it on the market or puts the it into service under its own name or trademark, whether for payment or free of charge.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P35 a sh:PropertyShape;
+  sh:path dct:title;
+  sh:name "name"@en;
+  sh:description "The name assigned to the resource.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P36 a sh:PropertyShape;
+  sh:path it6:releaseDate;
+  sh:name "name"@en;
+  sh:description "The date a model is released.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P37 a sh:PropertyShape;
+  sh:path it6:placedOnMarketDate;
+  sh:name "placed on market date"@en;
+  sh:description "Date when the model was placed on the Union market.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P38 a sh:PropertyShape;
+  sh:path it6:fineTunedFrom;
+  sh:name "fine tuned from"@en;
+  sh:description "The model from on which this model has been fine tuned.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Info .
+
+mldcatap:NCA-P39 a sh:PropertyShape;
+  sh:path it6:hasVariation;
+  sh:name "has variation"@en;
+  sh:description "The model that is variant of this model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Info .
+
+mldcatap:NCA-P40 a sh:PropertyShape;
+  sh:path it6:modelArchitecture;
+  sh:name "model architecture"@en;
+  sh:description "A general description of the model architecture, e.g. a transformer architecture.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P41 a sh:PropertyShape;
+  sh:path it6:designSpecifications;
+  sh:name "model architecture"@en;
+  sh:description "A general description of the main steps or stages involved in the training process, including training methodologies and techniques, the key design choices, assumptions made and what the model is designed to optimise for, and the relevance of different parameters, as applicable.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P42 a sh:PropertyShape;
+  sh:path it6:hasInputModality;
+  sh:name "has input modality"@en;
+  sh:description "The modality of the input of the model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P43 a sh:PropertyShape;
+  sh:path it6:hasOutputModality;
+  sh:name "has output modality"@en;
+  sh:description "The modality of the output of the model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P44 a sh:PropertyShape;
+  sh:path it6:totalNumberOfParameters;
+  sh:name "total number of parameters"@en;
+  sh:description "The total number of parameters of the model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P45 a sh:PropertyShape;
+  sh:path it6:methodOfDistribution;
+  sh:name "method of distribution"@en;
+  sh:description "A method of distribution through which the model has been made or can be made available to downstream providers.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P46 a sh:PropertyShape;
+  sh:path dct:license;
+  sh:name "licence"@en;
+  sh:description "The licence under which the resource is made available.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P47 a sh:PropertyShape;
+  sh:path it6:trainedOn;
+  sh:name "trained on"@en;
+  sh:description "The training dataset used to train the machine learning model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P48 a sh:PropertyShape;
+  sh:path odrl:hasPolicy;
+  sh:name "has policy"@en;
+  sh:description "The policy expressing the rights associated with the distribution if using the [ODRL] vocabulary.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P49 a sh:PropertyShape;
+  sh:path it6:intendedUse;
+  sh:name "intended use"@en;
+  sh:description "The prescribed application of the model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P50 a sh:PropertyShape;
+  sh:path it6:trainingProcess;
+  sh:name "training process"@en;
+  sh:description "A description of the training process.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P51 a sh:PropertyShape;
+  sh:path it6:trainingMethodologies;
+  sh:name "training methodologies"@en;
+  sh:description "A description of the methodologies used.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P52 a sh:PropertyShape;
+  sh:path it6:hasFile;
+  sh:name "has file"@en;
+  sh:description "The file in which the model is expressed.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P55 a sh:PropertyShape;
+  sh:path spdx:checksum;
+  sh:name "checksum"@en;
+  sh:description "A mechanism that can be used to verify that the contents of a distribution have not changed.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P58 a sh:PropertyShape;
+  sh:path it6:classification;
+  sh:name "classification"@en;
+  sh:description "The classification of the modality.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P61 a sh:PropertyShape;
+  sh:path dcat:accessURL;
+  sh:name "access URL"@en;
+  sh:description "A URL that gives access to a Distribution of the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P62 a sh:PropertyShape;
+  sh:path it6:numberOfDatapoints;
+  sh:name "number of datapoints"@en;
+  sh:description "The total count of individual data entries or observations contained.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P65 a sh:PropertyShape;
+  sh:path dct:description;
+  sh:name "description"@en;
+  sh:description "Description of the resource.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P66 a sh:PropertyShape;
+  sh:path it6:isExecutedBy;
+  sh:name "is executed by"@en;
+  sh:description "The library that is executed by this file.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P69 a sh:PropertyShape;
+  sh:path dct:type;
+  sh:name "type"@en;
+  sh:description "A type of the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P70 a sh:PropertyShape;
+  sh:path it6:dataProvenance;
+  sh:name "data provenance"@en;
+  sh:description "A documented trail that accounts for the origin of the data.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P71 a sh:PropertyShape;
+  sh:path it6:collectionMethod;
+  sh:name "collection method"@en;
+  sh:description "Method used to collect the data, provided by the uploader.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P72 a sh:PropertyShape;
+  sh:path dct:description;
+  sh:name "description"@en;
+  sh:description "A free-text account of the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P73 a sh:PropertyShape;
+  sh:path dcat:theme;
+  sh:name "theme"@en;
+  sh:description "A category of the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P74 a sh:PropertyShape;
+  sh:path dct:spatial;
+  sh:name "geographical coverage"@en;
+  sh:description "A geographic region that is covered by the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P75 a sh:PropertyShape;
+  sh:path dct:language;
+  sh:name "language"@en;
+  sh:description "A language of the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P76 a sh:PropertyShape;
+  sh:path it6:curationMethod;
+  sh:name "curation method"@en;
+  sh:description "General description of the data processing involved in transforming the acquired data into training, testing, and validation data for the model, such as cleaning (e.g. filtering out irrelevant content such as advertisements), normalisation (e.g. tokenizing), augmentation (e.g. back-translation).";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P77 a sh:PropertyShape;
+  sh:path it6:unsuitabilityMethod;
+  sh:name "unsuitability method"@en;
+  sh:description "A description of any methods implemented in data acquisition or processing, if any, to detect the presence of unsuitable data sources considering the models intended uses, including but not limited to illegal content, child sexual abuse material (CSAM), non-consensual intimate imagery (NCII), and personal data leading to its unlawful processing.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P78 a sh:PropertyShape;
+  sh:path it6:biasMethod;
+  sh:name "bias method"@en;
+  sh:description "A description of any methods implemented in data acquisition or processing, if any, to address the prevalence of identifiable biases in the training data.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P79 a sh:PropertyShape;
+  sh:path dcat:distribution;
+  sh:name "dataset distribution"@en;
+  sh:description "An available Distribution for the Dataset.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P82 a sh:PropertyShape;
+  sh:path it6:trainingTime;
+  sh:name "training time"@en;
+  sh:description "A description of the training time.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P83 a sh:PropertyShape;
+  sh:path it6:hasTrainingImpact;
+  sh:name "has training impact"@en;
+  sh:description "Measured or estimated amount of energy used for training.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P84 a sh:PropertyShape;
+  sh:path it6:hasOutputFilePrediction;
+  sh:name "has output file prediction"@en;
+  sh:description "The prediction, expressed as a file, that is the machine learning model";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P85 a sh:PropertyShape;
+  sh:path it6:hasInferencingImpact;
+  sh:name "has inferencing impact"@en;
+  sh:description "The impact of inferencing the model.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .
+
+mldcatap:NCA-P88 a sh:PropertyShape;
+  sh:path it6:measurementMethodology;
+  sh:name "measurement methodology"@en;
+  sh:description "The methodology with which the resource was measured.";
+  sh:minCount "1"^^xsd:integer;
+  sh:severity sh:Violation .

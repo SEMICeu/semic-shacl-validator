@@ -1,0 +1,24 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mldcatap: <https://semiceu.github.io/MLDCAT-AP/releases/3.0.0#> .
+@prefix it6: <http://data.europa.eu/it6/> .
+
+mldcatap:COP-MachineLearningModelShape
+    a sh:NodeShape ;
+    sh:targetClass it6:MachineLearningModel ;
+    sh:property mldcatap:AIO-PInputSize .
+
+mldcatap:AIO-PInputSize
+    a sh:PropertyShape ;
+    sh:path it6:hasInputModality ;
+    sh:node mldcatap:ModalitySizeShape ;
+    sh:message "Property 'size' is required for Modality when referenced via 'it6:hasInputModality' from MachineLearningModel" .
+
+mldcatap:ModalitySizeShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path it6:size ;
+        sh:minCount 1 ;
+    ] .
